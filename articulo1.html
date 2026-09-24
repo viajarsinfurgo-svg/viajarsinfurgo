@@ -3,21 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primera gran ruta - Viajar sin Furgo</title>
+    <title>Mi primera gran ruta: Preparativos y consejos - Viajar Sin Furgo</title>
     <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #333; background: #f9f9f9; }
-        article { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        h1 { color: #2c3e50; }
-        .back { display: inline-block; margin-bottom: 20px; color: #2980b9; text-decoration: none; }
+        :root {
+            --verde: #214C3B;
+            --naranja: #D26B45;
+            --crema: #E9D8C5;
+            --blanco: #F8F7F3;
+            --marron: #8A5A3C;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--blanco);
+            color: #333;
+            line-height: 1.7;
+        }
+
+        header {
+            background: white;
+            padding: 20px 8%;
+            border-bottom: 4px solid var(--naranja);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--verde);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .back {
+            color: var(--naranja);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        article {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .foto-principal {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        .meta {
+            color: var(--marron);
+            font-size: 0.95em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: var(--verde);
+            font-size: 38px;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        h2 {
+            color: var(--verde);
+            font-size: 26px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--naranja);
+            padding-left: 12px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #444;
+            font-size: 1.05em;
+        }
+
+        .info-box {
+            background: var(--crema);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border-left: 5px solid var(--verde);
+        }
+
+        .info-box h3 {
+            color: var(--verde);
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: var(--verde);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+        }
+
+        @media(max-width: 700px) {
+            article { padding: 25px; }
+            h1 { font-size: 28px; }
+            .foto-principal { height: 250px; }
+        }
     </style>
 </head>
 <body>
-    <article>
+
+    <header>
+        <a href="index.html" class="logo">VIAJAR SIN FURGO</a>
         <a class="back" href="index.html">← Volver al inicio</a>
-        <h1>Mi primera gran ruta: Preparativos y primeros consejos</h1>
-        <p><em>Publicado en mi blog de viajes.</em></p>
-        <p>Aquí es donde puedes escribir todo el texto de tu aventura, contar cómo organizaste el viaje, qué sitios visitaste y añadir tus impresiones personales sin depender de interfaces raras ni editores complicados.</p>
-        <p>¡Escribir aquí es tan fácil como editar este texto en GitHub y darle a guardar!</p>
-    </article>
+    </header>
+
+    <main>
+        <article>
+            <img class="foto-principal" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80" alt="Preparativos de ruta">
+
+            <div class="meta">⛰️ Consejos y Preparativos · Guía Práctica</div>
+            
+            <h1>Mi primera gran ruta: Preparativos y primeros consejos</h1>
+
+            <p>Descubre cómo organizamos esta aventura paso a paso y qué no puede faltar en tu mochila cuando sales a la montaña sin vehículo de apoyo.</p>
+
+            <h2>Puntos clave de la planificación</h2>
+            <div class="info-box">
+                <h3>Lo que debes tener en cuenta</h3>
+                <p><strong>Meteorología:</strong> Consulta siempre previsiones fiables en alta montaña.<br>
+                <strong>Logística:</strong> Puntos de agua y rutas de escape o refugios cercanos.<br>
+                <strong>Peso:</strong> Lleva lo justo y necesario para no sobrecargar la espalda.</p>
+            </div>
+
+            <h2>La experiencia en el camino</h2>
+            <p>Contar la aventura desde dentro ayuda a entender por qué cada paso merece la pena. La gestión del tiempo y el ritmo constante son las claves para disfrutar sin extenuarse antes de llegar a la cumbre.</p>
+
+            <h2>Conclusiones</h2>
+            <p>Una experiencia inolvidable que sienta las bases para las siguientes grandes rutas que iremos publicando por aquí.</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>© Viajar Sin Furgo · Montaña, senderismo técnico y aventuras.</p>
+    </footer>
+
 </body>
 </html>
