@@ -1,61 +1,322 @@
-<!DOCTYPE html>
+export default {
+  async fetch(request) {
+    return new Response(`<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viajar sin Furgo - Rutas de montaña y aventuras</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; background: #f4f6f8; }
-        header { text-align: center; padding: 50px 20px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 30px; }
-        h1 { color: #2c3e50; margin-bottom: 10px; font-size: 2.5em; }
-        .subtitle { color: #666; font-size: 1.1em; max-width: 600px; margin: 0 auto; }
-        .section-title { color: #2c3e50; border-bottom: 2px solid #e1e4e8; padding-bottom: 10px; margin-top: 40px; margin-bottom: 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.2s; }
-        .card:hover { transform: translateY(-3px); }
-        .card h3 { margin-top: 0; color: #2980b9; }
-        .card p { color: #555; font-size: 0.95em; }
-        a { color: #2980b9; text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; }
-        footer { text-align: center; margin-top: 60px; padding: 20px; color: #888; font-size: 0.9em; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Viajar Sin Furgo</title>
+
+<style>
+
+:root{
+ --verde:#214C3B;
+ --naranja:#D26B45;
+ --crema:#E9D8C5;
+ --blanco:#F8F7F3;
+ --marron:#8A5A3C;
+}
+
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+
+body{
+ font-family:Arial, Helvetica, sans-serif;
+ background:var(--blanco);
+ color:var(--verde);
+}
+
+header{
+ position:sticky;
+ top:0;
+ background:white;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ padding:20px 8%;
+ border-bottom:4px solid var(--naranja);
+ z-index:10;
+}
+
+.logo{
+ font-size:28px;
+ font-weight:bold;
+ letter-spacing:1px;
+}
+
+nav{
+ display:flex;
+ gap:24px;
+ flex-wrap:wrap;
+}
+
+nav a{
+ color:var(--verde);
+ text-decoration:none;
+ font-weight:bold;
+}
+
+.hero{
+ min-height:70vh;
+ display:flex;
+ align-items:center;
+ padding:80px 8%;
+ background:
+ linear-gradient(rgba(33,76,59,.55), rgba(33,76,59,.55)),
+ url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80");
+ background-size:cover;
+ background-position:center;
+ color:white;
+}
+
+.hero h1{
+ font-size:70px;
+ margin:15px 0;
+}
+
+.hero p{
+ max-width:600px;
+ line-height:1.7;
+ font-size:20px;
+}
+
+.sub{
+ color:#FFD9C6;
+ text-transform:uppercase;
+ letter-spacing:2px;
+ font-size:14px;
+}
+
+.boton{
+ display:inline-block;
+ margin-top:35px;
+ background:var(--naranja);
+ color:white;
+ padding:15px 28px;
+ border-radius:40px;
+ text-decoration:none;
+ font-weight:bold;
+}
+
+section{
+ padding:70px 8%;
+}
+
+h2{
+ font-size:40px;
+ margin-bottom:30px;
+}
+
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+ gap:22px;
+}
+
+.card{
+ border-radius:22px;
+ overflow:hidden;
+ background:white;
+ box-shadow:0 10px 30px rgba(0,0,0,.08);
+ transition:.3s;
+}
+
+.card:hover{
+ transform:translateY(-5px);
+}
+
+.card img{
+ width:100%;
+ height:190px;
+ object-fit:cover;
+ display:block;
+}
+
+.card .texto{
+ padding:24px;
+}
+
+.card h3{
+ margin-bottom:12px;
+ color:var(--verde);
+}
+
+.card p{
+ line-height:1.6;
+ color:#555;
+}
+
+.destacado{
+ background:var(--crema);
+ border-radius:30px;
+ padding:50px;
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:35px;
+ align-items:center;
+}
+
+.destacado img{
+ width:100%;
+ border-radius:20px;
+ height:320px;
+ object-fit:cover;
+}
+
+footer{
+ background:var(--verde);
+ color:white;
+ text-align:center;
+ padding:40px;
+ margin-top:50px;
+}
+
+@media(max-width:700px){
+
+header{
+ flex-direction:column;
+ gap:15px;
+}
+
+.hero h1{
+ font-size:48px;
+}
+
+.hero p{
+ font-size:18px;
+}
+
+.destacado{
+ grid-template-columns:1fr;
+ padding:30px;
+}
+
+nav{
+ justify-content:center;
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
-    <header>
-        <h1>🚐 Viajar sin Furgo</h1>
-        <p class="subtitle">Un rincón para descubrir rutas de montaña, vías ferratas y viajes contados desde la experiencia y la fotografía.</p>
-    </header>
-    
-    <main>
-        <h2 class="section-title">🧭 Destinos y Secciones</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>⛰️ Sierra Cantabria</h3>
-                <p>Rutas, cimas y travesías por una de mis sierras favoritas.</p>
-            </div>
-            <div class="card">
-                <h3>🧗 Vías Ferratas</h3>
-                <p>Guías completas ordenadas por dificultad y consejos de seguridad.</p>
-            </div>
-            <div class="card">
-                <h3>🏕️ Senderismo Técnico</h3>
-                <p>Solo rutas especiales: crestas, vivacs y alta montaña.</p>
-            </div>
-            <div class="card">
-                <h3>🌍 Polonia</h3>
-                <p>Tatras, Cracovia, Zakopane y escapadas inolvidables.</p>
-            </div>
-        </div>
 
-        <h2 class="section-title">📖 Últimos Artículos</h2>
-        <div class="card">
-            <h3><a href="articulo1.html">Mi primera gran ruta: Preparativos y primeros consejos</a></h3>
-            <p>Descubre cómo organizamos esta aventura paso a paso y qué no puede faltar en tu mochila.</p>
-        </div>
-    </main>
+<header>
 
-    <footer>
-        <p>&copy; Viajar sin Furgo. Todos los derechos reservados.</p>
-    </footer>
+<div class="logo">VIAJAR SIN FURGO</div>
+
+<nav>
+<a href="#">Inicio</a>
+<a href="#">Sierra Cantabria</a>
+<a href="#">Senderismo</a>
+<a href="#">Vías Ferratas</a>
+<a href="#">Polonia</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<p class="sub">Montaña · Senderismo técnico · Ferratas · Viajes</p>
+
+<h1>Viajar Sin Furgo</h1>
+
+<p>
+Rutas de montaña, vías ferratas y viajes contados desde la experiencia y la fotografía.
+</p>
+
+<a class="boton" href="#">Explorar rutas</a>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Explora la web</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80">
+<div class="texto">
+<h3>⛰ Sierra Cantabria</h3>
+<p>Crestas, cimas, travesías y todos los rincones de una de mis sierras favoritas.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=900&q=80">
+<div class="texto">
+<h3>🥾 Senderismo técnico</h3>
+<p>Solo rutas que realmente merecen una guía completa.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517821099601-84c0cd93bbf2?auto=format&fit=crop&w=900&q=80">
+<div class="texto">
+<h3>🧗 Vías Ferratas</h3>
+<p>Ferratas ordenadas por dificultad, desnivel y material necesario.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1519197924294-4ba991a11128?auto=format&fit=crop&w=900&q=80">
+<div class="texto">
+<h3>🇵🇱 Polonia</h3>
+<p>Tatras, Zakopane, Cracovia y escapadas por el sur de Polonia.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="destacado">
+
+<div>
+<h2>Artículo destacado</h2>
+
+<h3 style="margin:20px 0;color:#214C3B;">
+Ruta al Toubkal (4.167 m)
+</h3>
+
+<p style="line-height:1.8;">
+Una guía completa para subir al techo del norte de África: refugio, desnivel, consejos y todo lo que aprendí durante la ruta.
+</p>
+
+<a class="boton" href="#" style="margin-top:25px;">
+Leer la guía
+</a>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80">
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© Viajar Sin Furgo · Montaña, senderismo técnico y aventuras.</p>
+
+</footer>
+
 </body>
-</html>
+</html>`, {
+      headers: { "content-type": "text/html;charset=UTF-8" }
+    });
+  }
+}
