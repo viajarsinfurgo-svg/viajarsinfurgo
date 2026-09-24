@@ -3,30 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viajar sin Furgo</title>
+    <title>Viajar sin Furgo - Rutas de montaña y aventuras</title>
     <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #333; background: #f9f9f9; }
-        header { text-align: center; padding: 40px 0; background: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        h1 { color: #2c3e50; margin-bottom: 10px; }
-        .articles { margin-top: 40px; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .articles h2 { border-bottom: 2px solid #eee; padding-bottom: 10px; color: #2c3e50; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
-        a { color: #2980b9; text-decoration: none; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; background: #f4f6f8; }
+        header { text-align: center; padding: 50px 20px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        h1 { color: #2c3e50; margin-bottom: 10px; font-size: 2.5em; }
+        .subtitle { color: #666; font-size: 1.1em; max-width: 600px; margin: 0 auto; }
+        .section-title { color: #2c3e50; border-bottom: 2px solid #e1e4e8; padding-bottom: 10px; margin-top: 40px; margin-bottom: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.2s; }
+        .card:hover { transform: translateY(-3px); }
+        .card h3 { margin-top: 0; color: #2980b9; }
+        .card p { color: #555; font-size: 0.95em; }
+        a { color: #2980b9; text-decoration: none; font-weight: bold; }
         a:hover { text-decoration: underline; }
+        footer { text-align: center; margin-top: 60px; padding: 20px; color: #888; font-size: 0.9em; }
     </style>
 </head>
 <body>
     <header>
         <h1>🚐 Viajar sin Furgo</h1>
-        <p>Mis rutas, escapadas y aventuras sobre ruedas.</p>
+        <p class="subtitle">Un rincón para descubrir rutas de montaña, vías ferratas y viajes contados desde la experiencia y la fotografía.</p>
     </header>
     
-    <div class="articles">
-        <h2>Últimos Artículos</h2>
-        <ul>
-            <li><a href="articulo1.html">Mi primera gran ruta: Preparativos y primeros consejos</a></li>
-        </ul>
-    </div>
+    <main>
+        <h2 class="section-title">🧭 Destinos y Secciones</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>⛰️ Sierra Cantabria</h3>
+                <p>Rutas, cimas y travesías por una de mis sierras favoritas.</p>
+            </div>
+            <div class="card">
+                <h3>🧗 Vías Ferratas</h3>
+                <p>Guías completas ordenadas por dificultad y consejos de seguridad.</p>
+            </div>
+            <div class="card">
+                <h3>🏕️ Senderismo Técnico</h3>
+                <p>Solo rutas especiales: crestas, vivacs y alta montaña.</p>
+            </div>
+            <div class="card">
+                <h3>🌍 Polonia</h3>
+                <p>Tatras, Cracovia, Zakopane y escapadas inolvidables.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">📖 Últimos Artículos</h2>
+        <div class="card">
+            <h3><a href="articulo1.html">Mi primera gran ruta: Preparativos y primeros consejos</a></h3>
+            <p>Descubre cómo organizamos esta aventura paso a paso y qué no puede faltar en tu mochila.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Viajar sin Furgo. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
