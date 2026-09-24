@@ -1,6 +1,4 @@
-export default {
-  async fetch(request) {
-    return new Response(`<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -11,192 +9,192 @@ export default {
 <style>
 
 :root{
- --verde:#214C3B;
- --naranja:#D26B45;
- --crema:#E9D8C5;
- --blanco:#F8F7F3;
- --marron:#8A5A3C;
+  --verde:#214C3B;
+  --naranja:#D26B45;
+  --crema:#E9D8C5;
+  --blanco:#F8F7F3;
+  --marron:#8A5A3C;
 }
 
 *{
- margin:0;
- padding:0;
- box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body{
- font-family:Arial, Helvetica, sans-serif;
- background:var(--blanco);
- color:var(--verde);
+  font-family:Arial, Helvetica, sans-serif;
+  background:var(--blanco);
+  color:var(--verde);
 }
 
 header{
- position:sticky;
- top:0;
- background:white;
- display:flex;
- justify-content:space-between;
- align-items:center;
- padding:20px 8%;
- border-bottom:4px solid var(--naranja);
- z-index:10;
+  position:sticky;
+  top:0;
+  background:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  border-bottom:4px solid var(--naranja);
+  z-index:10;
 }
 
 .logo{
- font-size:28px;
- font-weight:bold;
- letter-spacing:1px;
+  font-size:28px;
+  font-weight:bold;
+  letter-spacing:1px;
 }
 
 nav{
- display:flex;
- gap:24px;
- flex-wrap:wrap;
+  display:flex;
+  gap:24px;
+  flex-wrap:wrap;
 }
 
 nav a{
- color:var(--verde);
- text-decoration:none;
- font-weight:bold;
+  color:var(--verde);
+  text-decoration:none;
+  font-weight:bold;
 }
 
 .hero{
- min-height:70vh;
- display:flex;
- align-items:center;
- padding:80px 8%;
- background:
- linear-gradient(rgba(33,76,59,.55), rgba(33,76,59,.55)),
- url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80");
- background-size:cover;
- background-position:center;
- color:white;
+  min-height:70vh;
+  display:flex;
+  align-items:center;
+  padding:80px 8%;
+  background:
+  linear-gradient(rgba(33,76,59,.55), rgba(33,76,59,.55)),
+  url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80");
+  background-size:cover;
+  background-position:center;
+  color:white;
 }
 
 .hero h1{
- font-size:70px;
- margin:15px 0;
+  font-size:70px;
+  margin:15px 0;
 }
 
 .hero p{
- max-width:600px;
- line-height:1.7;
- font-size:20px;
+  max-width:600px;
+  line-height:1.7;
+  font-size:20px;
 }
 
 .sub{
- color:#FFD9C6;
- text-transform:uppercase;
- letter-spacing:2px;
- font-size:14px;
+  color:#FFD9C6;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:14px;
 }
 
 .boton{
- display:inline-block;
- margin-top:35px;
- background:var(--naranja);
- color:white;
- padding:15px 28px;
- border-radius:40px;
- text-decoration:none;
- font-weight:bold;
+  display:inline-block;
+  margin-top:35px;
+  background:var(--naranja);
+  color:white;
+  padding:15px 28px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
 section{
- padding:70px 8%;
+  padding:70px 8%;
 }
 
 h2{
- font-size:40px;
- margin-bottom:30px;
+  font-size:40px;
+  margin-bottom:30px;
 }
 
 .grid{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
- gap:22px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
 }
 
 .card{
- border-radius:22px;
- overflow:hidden;
- background:white;
- box-shadow:0 10px 30px rgba(0,0,0,.08);
- transition:.3s;
+  border-radius:22px;
+  overflow:hidden;
+  background:white;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  transition:.3s;
 }
 
 .card:hover{
- transform:translateY(-5px);
+  transform:translateY(-5px);
 }
 
 .card img{
- width:100%;
- height:190px;
- object-fit:cover;
- display:block;
+  width:100%;
+  height:190px;
+  object-fit:cover;
+  display:block;
 }
 
 .card .texto{
- padding:24px;
+  padding:24px;
 }
 
 .card h3{
- margin-bottom:12px;
- color:var(--verde);
+  margin-bottom:12px;
+  color:var(--verde);
 }
 
 .card p{
- line-height:1.6;
- color:#555;
+  line-height:1.6;
+  color:#555;
 }
 
 .destacado{
- background:var(--crema);
- border-radius:30px;
- padding:50px;
- display:grid;
- grid-template-columns:1fr 1fr;
- gap:35px;
- align-items:center;
+  background:var(--crema);
+  border-radius:30px;
+  padding:50px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+  align-items:center;
 }
 
 .destacado img{
- width:100%;
- border-radius:20px;
- height:320px;
- object-fit:cover;
+  width:100%;
+  border-radius:20px;
+  height:320px;
+  object-fit:cover;
 }
 
 footer{
- background:var(--verde);
- color:white;
- text-align:center;
- padding:40px;
- margin-top:50px;
+  background:var(--verde);
+  color:white;
+  text-align:center;
+  padding:40px;
+  margin-top:50px;
 }
 
 @media(max-width:700px){
 
 header{
- flex-direction:column;
- gap:15px;
+  flex-direction:column;
+  gap:15px;
 }
 
 .hero h1{
- font-size:48px;
+  font-size:48px;
 }
 
 .hero p{
- font-size:18px;
+  font-size:18px;
 }
 
 .destacado{
- grid-template-columns:1fr;
- padding:30px;
+  grid-template-columns:1fr;
+  padding:30px;
 }
 
 nav{
- justify-content:center;
+  justify-content:center;
 }
 
 }
@@ -246,7 +244,7 @@ Rutas de montaña, vías ferratas y viajes contados desde la experiencia y la fo
 <div class="grid">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Sierra Cantabria">
 <div class="texto">
 <h3>⛰ Sierra Cantabria</h3>
 <p>Crestas, cimas, travesías y todos los rincones de una de mis sierras favoritas.</p>
@@ -254,7 +252,7 @@ Rutas de montaña, vías ferratas y viajes contados desde la experiencia y la fo
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=900&q=80">
+<img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=900&q=80" alt="Senderismo técnico">
 <div class="texto">
 <h3>🥾 Senderismo técnico</h3>
 <p>Solo rutas que realmente merecen una guía completa.</p>
@@ -262,7 +260,7 @@ Rutas de montaña, vías ferratas y viajes contados desde la experiencia y la fo
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1517821099601-84c0cd93bbf2?auto=format&fit=crop&w=900&q=80">
+<img src="https://images.unsplash.com/photo-1517821099601-84c0cd93bbf2?auto=format&fit=crop&w=900&q=80" alt="Vías Ferratas">
 <div class="texto">
 <h3>🧗 Vías Ferratas</h3>
 <p>Ferratas ordenadas por dificultad, desnivel y material necesario.</p>
@@ -270,7 +268,7 @@ Rutas de montaña, vías ferratas y viajes contados desde la experiencia y la fo
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1519197924294-4ba991a11128?auto=format&fit=crop&w=900&q=80">
+<img src="https://images.unsplash.com/photo-1519197924294-4ba991a11128?auto=format&fit=crop&w=900&q=80" alt="Polonia">
 <div class="texto">
 <h3>🇵🇱 Polonia</h3>
 <p>Tatras, Zakopane, Cracovia y escapadas por el sur de Polonia.</p>
@@ -289,20 +287,20 @@ Rutas de montaña, vías ferratas y viajes contados desde la experiencia y la fo
 <h2>Artículo destacado</h2>
 
 <h3 style="margin:20px 0;color:#214C3B;">
-Ruta al Toubkal (4.167 m)
+<a href="articulo1.html" style="color:var(--verde); text-decoration:none;">Ruta al Toubkal (4.167 m)</a>
 </h3>
 
 <p style="line-height:1.8;">
 Una guía completa para subir al techo del norte de África: refugio, desnivel, consejos y todo lo que aprendí durante la ruta.
 </p>
 
-<a class="boton" href="#" style="margin-top:25px;">
+<a class="boton" href="articulo1.html" style="margin-top:25px;">
 Leer la guía
 </a>
 
 </div>
 
-<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80">
+<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80" alt="Toubkal">
 
 </div>
 
@@ -315,8 +313,4 @@ Leer la guía
 </footer>
 
 </body>
-</html>`, {
-      headers: { "content-type": "text/html;charset=UTF-8" }
-    });
-  }
-}
+</html>
